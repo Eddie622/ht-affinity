@@ -384,21 +384,21 @@ HT Affinity is distributed under the terms of the GNU GPL.
 
 @font-face {
     font-family: 'Poppins';
-    src: url('localhost/wp-content/themes/ht-affinity/fonts/Poppins-Regular.woff') format('woff');
+    src: url('localhost/wp-content/themes/ht-affinity/assets/fonts/Poppins-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('localhost/wp-content/themes/ht-affinity/fonts/Poppins-Bold.woff') format('woff');
+    src: url('localhost/wp-content/themes/ht-affinity/assets/fonts/Poppins-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('localhost/wp-content/themes/ht-affinity/fonts/Poppins-Italic.woff') format('woff');
+    src: url('localhost/wp-content/themes/ht-affinity/assets/fonts/Poppins-Italic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
