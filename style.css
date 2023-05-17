@@ -18,3 +18,33 @@ Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
 Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
 Twenty Twenty-One is distributed under the terms of the GNU GPL.
 */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('localhost/wp-content/themes/ht-affinity/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('localhost/wp-content/themes/ht-affinity/fonts/Poppins-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('localhost/wp-content/themes/ht-affinity/fonts/Poppins-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins-regular', Arial, sans-serif;
+}
+
+.top-bar {
+    background: red;
+    height: 70px;
+}
