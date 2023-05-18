@@ -26,6 +26,8 @@ function htaffinity_config() {
         'flex-height' => true,
         'flex-width' => true
     ) );
+    add_theme_support( 'automatic-feed-links');
+    add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
     add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'htaffinity_config', 0 );
@@ -77,3 +79,9 @@ function htaffinity_sidebars() {
     );
 }
 add_action( 'widgets_init', 'htaffinity_sidebars' );
+
+if ( ! function_exists( 'wp_body_open' ) ) {
+    function wp_body_open() {
+        do_action( 'wp_body_open' );
+    }
+}
