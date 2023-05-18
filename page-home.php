@@ -2,13 +2,13 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <section class="hero" style="background-image: url('http://localhost/wp-content/uploads/2023/05/pexels-lumn-167699-scaled.jpeg')">
-                        <div class="overlay" style="min-height: 800px">
+                    <section class="hero" style="background-image: url('<?php echo wp_get_attachment_url( get_theme_mod( 'setting_hero_background_image' ) );?>')">
+                        <div class="overlay" style="min-height: <?php echo get_theme_mod( 'setting_hero_height', '800' );?>px">
                             <div class="container">
                                 <div class="hero-items">
-                                    <h1><?php bloginfo( 'name' ); ?></h1>
-                                    <p><?php bloginfo( 'description' ); ?></p>
-                                    <a href="#">Learn More</a>
+                                    <h1><?php echo get_theme_mod( 'setting_hero_title', 'Welcome to Affinity' ); ?></h1>
+                                    <p><?php echo nl2br( get_theme_mod( 'setting_hero_subtitle', 'We are a creative group of people who design influential brands and digital experiences.' ) ); ?></p>
+                                    <a href="<?php echo get_theme_mod( 'setting_hero_button_link', '#' ); ?>"><?php echo get_theme_mod( 'setting_hero_button_text', 'Learn More' ); ?></a>
                                 </div>
                             </div>
                         </div>
