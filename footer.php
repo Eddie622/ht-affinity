@@ -1,7 +1,7 @@
             <footer class="site-footer">
                 <div class="container">
                     <div class="copyright">
-                        <p>Copyright X - All Rights Reserved</p>
+                        <p><?php echo get_theme_mod( 'setting_copyright', 'Copyright X - All rights Reserved' ); ?></p>
                     </div>
                     <nav class="footer-menu">
                         <?php wp_nav_menu( array( 'theme_location' => 'htaffinity_footer_menu', 'depth' => 1 ) ); ?>
