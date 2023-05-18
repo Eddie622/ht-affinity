@@ -6,9 +6,18 @@ function htaffinity_load_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'htaffinity_load_scripts' );
 
-register_nav_menus(
-    array(
-        'htaffinity_main_menu' => 'Main Menu',
-        'htaffinity_footer_menu' => 'Footer Menu'
-    )
-);
+function htaffinity_config() {
+    register_nav_menus(
+        array(
+            'htaffinity_main_menu' => 'Main Menu',
+            'htaffinity_footer_menu' => 'Footer Menu'
+        )
+    );
+
+    $args = array(
+        'height' => 225,
+        'width' => 1920
+    );
+    add_theme_support( 'custom-header', $args );
+}
+add_action( 'after_setup_theme', 'htaffinity_config', 0 );
