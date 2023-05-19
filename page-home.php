@@ -45,9 +45,9 @@
                             <?php 
                                 $args = array(
                                     'post_type' => 'post',
-                                    'posts_per_page' => 3,
-                                    'category_in' => array( 8, 9, 10 ),
-                                    'category_not_in' => array( 1 )
+                                    'posts_per_page' => get_theme_mod( 'setting_per_page', '5' ),
+                                    'category__in' => explode( ',', get_theme_mod( 'setting_category_include' )),
+                                    'category__not_in' => explode( ',', get_theme_mod( 'setting_category_exclude'))
                                 );
                                 $postlist = new WP_Query( $args );
 
