@@ -17,15 +17,15 @@
                                     ?>
                                         <div class="htaffinity-pagination">
                                             <div class="pages new">
-                                                <?php previous_posts_link( "<< Newer posts" ); ?>
+                                                <?php previous_posts_link( __( "<< Newer posts", 'ht-affinity' ) ); ?>
                                             </div>
                                             <div class="pages old">
-                                                <?php next_posts_link( "Older posts >>" ); ?>
+                                                <?php next_posts_link( __( "Older posts >>", 'ht-affinity' ) ); ?>
                                             </div>
                                         </div>
                                     <?php
                                 else: ?>
-                                    <p>Nothing yet to be displayed!</p>
+                                    <p><?php _e( 'Nothing yet to be displayed!', 'ht-affinity' ) ?></p>
                             <?php endif; ?>                                
                         </div>
                         <?php get_sidebar(); ?>

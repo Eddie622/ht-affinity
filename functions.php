@@ -9,10 +9,13 @@ function htaffinity_load_scripts(){
 add_action( 'wp_enqueue_scripts', 'htaffinity_load_scripts' );
 
 function htaffinity_config() {
+    $textdomain = 'ht-affinity';
+    load_theme_textdomain( $textdomain, get_template_directory() . '/languages');
+
     register_nav_menus(
         array(
-            'htaffinity_main_menu' => 'Main Menu',
-            'htaffinity_footer_menu' => 'Footer Menu'
+            'htaffinity_main_menu' => __( 'Main Menu', 'ht-affinity' ),
+            'htaffinity_footer_menu' => __( 'Footer Menu', 'ht-affinity' )
         )
     );
 
@@ -37,9 +40,9 @@ add_action( 'after_setup_theme', 'htaffinity_config', 0 );
 function htaffinity_sidebars() {
     register_sidebar(
         array(
-            'name' => 'Blog Sidebar',
+            'name' => __( 'Blog Sidebar', 'ht-affinity' ),
             'id' => 'sidebar-blog',
-            'description' => 'This is the Blog Sidebar. You can add widgets here.',
+            'description' => __('This is the Blog Sidebar. You can add widgets here.', 'ht-affinity'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',
@@ -48,9 +51,9 @@ function htaffinity_sidebars() {
     );
     register_sidebar(
         array(
-            'name' => 'Service 1',
+            'name' => __( 'Service 1', 'ht-affinity' ),
             'id' => 'services-1',
-            'description' => 'First Service Area.',
+            'description' => __( 'First Service Area.', 'ht-affinity' ),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',
@@ -59,9 +62,9 @@ function htaffinity_sidebars() {
     );
     register_sidebar(
         array(
-            'name' => 'Service 2',
+            'name' => __( 'Service 2', 'ht-affinity' ),
             'id' => 'services-2',
-            'description' => 'Second Service Area.',
+            'description' => __( 'Second Service Area.', 'ht-affinity' ),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',
@@ -70,9 +73,9 @@ function htaffinity_sidebars() {
     );
     register_sidebar(
         array(
-            'name' => 'Service 3',
+            'name' => __( 'Service 3', 'ht-affinity' ),
             'id' => 'services-3',
-            'description' => 'Third Service Area.',
+            'description' => __( 'Third Service Area.', 'ht-affinity' ),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',

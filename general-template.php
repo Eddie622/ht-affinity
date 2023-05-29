@@ -21,7 +21,7 @@
                                 <?php
                                 endwhile;
                             else: ?>
-                                <p>Nothing yet to be displayed!</p>
+                                <p><?php _e( 'Nothing yet to be displayed!', 'ht-affinity' ) ?></p>
                         <?php endif; ?>                                
                     </div>
                 </div>
