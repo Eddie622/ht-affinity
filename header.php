@@ -4,10 +4,12 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script type="module" src="./wp-content/themes/ht-affinity/assets/js/script.js"></script> -->
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
+    <!-- <div id="container"></div> -->
     <div id="page" class="site">
         <header>
             <section class="top-bar">
