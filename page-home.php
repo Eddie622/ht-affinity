@@ -2,19 +2,19 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <section class="hero" style="background-image: url('<?php echo wp_get_attachment_url( get_theme_mod( 'setting_hero_background_image' ) );?>')">
-                        <div class="overlay" style="min-height: <?php echo get_theme_mod( 'setting_hero_height', '800' );?>px">
+                    <section class="hero" style="background-image: url('<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'setting_hero_background_image' ) ) );?>')">
+                        <div class="overlay" style="min-height: <?php echo esc_attr( get_theme_mod( 'setting_hero_height', '800' ) );?>px">
                             <div class="container">
                                 <div class="hero-items">
-                                    <h1><?php echo get_theme_mod( 'setting_hero_title', __( 'Welcome to Affinity', 'ht-affinity' ) ); ?></h1>
-                                    <p><?php echo nl2br( get_theme_mod( 'setting_hero_subtitle', __( 'We are a creative group of people who design influential brands and digital experiences.', 'ht-affinity' ) ) ); ?></p>
-                                    <a href="<?php echo get_theme_mod( 'setting_hero_button_link', '#' ); ?>"><?php echo get_theme_mod( 'setting_hero_button_text', __( 'Learn More', 'ht-affinity' ) ); ?></a>
+                                    <h1><?php echo esc_html( get_theme_mod( 'setting_hero_title', __( 'Welcome to Affinity', 'ht-affinity' ) ) ); ?></h1>
+                                    <p><?php echo nl2br( esc_html( get_theme_mod( 'setting_hero_subtitle', __( 'We are a creative group of people who design influential brands and digital experiences.', 'ht-affinity' ) ) ) ); ?></p>
+                                    <a href="<?php echo esc_url( get_theme_mod( 'setting_hero_button_link', '#' ) ); ?>"><?php echo esc_html( get_theme_mod( 'setting_hero_button_text', __( 'Learn More', 'ht-affinity' ) ) ); ?></a>
                                 </div>
                             </div>
                         </div>
                     </section>
                         <section class="services">
-                            <h2><?php _e( 'Services', 'ht-affinity') ?></h2>
+                            <h2><?php esc_html_e( 'Services', 'ht-affinity') ?></h2>
                         <div class="container">
                             <div class="services-item">
                                 <?php
@@ -40,14 +40,14 @@
                         </div>
                     </section>
                     <section class="home-blog">
-                        <h2><?php _e( 'Latest News', 'ht-affinity') ?></h2>
+                        <h2><?php esc_html_e( 'Latest News', 'ht-affinity') ?></h2>
                         <div class="container">
                             <?php 
                                 $args = array(
                                     'post_type' => 'post',
-                                    'posts_per_page' => get_theme_mod( 'setting_per_page', '5' ),
-                                    'category__in' => explode( ',', get_theme_mod( 'setting_category_include' )),
-                                    'category__not_in' => explode( ',', get_theme_mod( 'setting_category_exclude'))
+                                    'posts_per_page' => esc_html( get_theme_mod( 'setting_per_page', '5' ) ),
+                                    'category__in' => explode( ',', esc_html( get_theme_mod( 'setting_category_include' ) ) ),
+                                    'category__not_in' => explode( ',', esc_html( get_theme_mod( 'setting_category_exclude') ) )
                                 );
                                 $postlist = new WP_Query( $args );
 
@@ -57,7 +57,7 @@
                                     endwhile;
                                     wp_reset_postdata();
                                 else: ?>
-                                    <p><?php _e( 'Nothing yet to be displayed!', 'ht-affinity' ) ?></p>
+                                    <p><?php esc_html_e( 'Nothing yet to be displayed!', 'ht-affinity' ) ?></p>
                             <?php endif; ?>                                
                         </div>
                     </section>

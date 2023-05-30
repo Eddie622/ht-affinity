@@ -5,18 +5,18 @@
             <div class="container">
                 <div class="error-404">
                     <header>
-                        <h1><?php _e( 'Page not found', 'ht-affinity' ) ?></h1>
-                        <p><?php _e( 'Unfortunately, the page you tried to reach does not exist on this site.', 'ht-affinity' ) ?></p>
+                        <h1><?php esc_html_e( 'Page not found', 'ht-affinity' ) ?></h1>
+                        <p><?php esc_html_e( 'Unfortunately, the page you tried to reach does not exist on this site.', 'ht-affinity' ) ?></p>
                     </header>
 
                     <div class="error">
-                        <p><?php _e( 'How about doing a search?', 'ht-affinity' ) ?></p>
+                        <p><?php esc_html_e( 'How about doing a search?', 'ht-affinity' ) ?></p>
                         <?php get_search_form(); ?>
                         <?php 
                         the_widget( 
                             'WP_Widget_Recent_Posts',
                             array(
-                                'title' => __( 'Latest Posts', 'ht-affinity' ),
+                                'title' => esc_html__( 'Latest Posts', 'ht-affinity' ),
                                 'number'    => 3
                             ) 
                         ); 
